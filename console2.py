@@ -45,92 +45,94 @@ class HBNBCommand(cmd.Cmd):
         print(new_instance.id)
 
     def do_show(self, arg):
-        """Prints the string representation of an instance."""
+        """Show an instance based on its ID."""
         if not arg:
             print("** class name missing **")
             return
         arg_list = arg.split()
+        if len(arg_list) < 2:
+            print("** instance id missing **")
+            return
         class_name = arg_list[0]
         if class_name not in globals():
             print("** class doesn't exist **")
             return
-        if len(arg_list) < 2:
-            print("** instance id missing **")
-            return
+        instance_id = arg_list[1]
+        key = "{}.{}".format(class_name, instance_id)
         instances = storage.all()
-        key = "{}.{}".format(class_name, arg_list[1])
-        if key not in instances:
-            print("** no instance found **")
-        else:
+        if key in instances:
             print(instances[key])
+        else:
+            print("** no instance found **")
 
     def do_destroy(self, arg):
-        """Deletes an instance based on the class name and id."""
+        """Destroy an instance based on its ID."""
         if not arg:
             print("** class name missing **")
             return
         arg_list = arg.split()
+        if len(arg_list) < 2:
+            print("** instance id missing **")
+            return
         class_name = arg_list[0]
         if class_name not in globals():
             print("** class doesn't exist **")
             return
-        if len(arg_list) < 2:
-            print("** instance id missing **")
-            return
+        instance_id = arg_list[1]
+        key = "{}.{}".format(class_name, instance_id)
         instances = storage.all()
-        key = "{}.{}".format(class_name, arg_list[1])
-        if key not in instances:
-            print("** no instance found **")
-        else:
+        if key in instances:
             del instances[key]
             storage.save()
+        else:
+            print("** no instance found **")
 
     def do_all(self, arg):
         """Prints all string representation of all instances."""
-        instances = storage.all()
         if not arg:
-            print([str(value) for value in instances.values()])
+            print([str(value) for value in storage.all().values()])
         else:
             arg_list = arg.split()
             class_name = arg_list[0]
             if class_name not in globals():
                 print("** class doesn't exist **")
                 return
-            print([str(value) for key, value in instances.items() if class_name in key])
+            print([str(value) for value in eval(class_name).all()])
 
     def do_update(self, arg):
-        """Updates an instance based on the class name and id."""
+        """Update an instance based on its ID."""
         if not arg:
             print("** class name missing **")
             return
         arg_list = arg.split()
+        if len(arg_list) < 2:
+            print("** instance id missing **")
+            return
         class_name = arg_list[0]
         if class_name not in globals():
             print("** class doesn't exist **")
             return
-        if len(arg_list) < 2:
-            print("** instance id missing **")
-            return
+        instance_id = arg_list[1]
+        key = "{}.{}".format(class_name, instance_id)
         instances = storage.all()
-        key = "{}.{}".format(class_name, arg_list[1])
         if key not in instances:
             print("** no instance found **")
             return
         if len(arg_list) < 3:
-            print("** attribute name missing **")
-            return
-        if len(arg_list) < 4:
-            print("** value missing **")
+            print("** dictionary missing **")
             return
         instance = instances[key]
-        attribute_name = arg_list[2]
-        attribute_value = arg_list[3]
-        if hasattr(instance, attribute_name):
-            attribute_type = type(getattr(instance, attribute_name))
-            setattr(instance, attribute_name, attribute_type(attribute_value))
-            instance.save()
-        else:
-            print("** no attribute found **")
+        try:
+            arg_dict = eval("{" + arg_list[2] + "}")
+        except Exception:
+            print("** invalid dictionary **")
+            return
+        for k, v in arg_dict.items():
+            if hasattr(instance, k):
+                attribute_type = type(getattr(instance, k))
+                setattr(instance, k, attribute_type(v))
+        instance.save()
+
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
