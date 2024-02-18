@@ -69,6 +69,6 @@ What you should learn from this project:
 
 ### [12. Accessibility](./103-index.html)
 * Improve the page by adding Accessibility support
+* ![screenshot of 103-index](https://github.com/Olatunde16/AirBnB_clone/assets/125552420/98fe3cf9-2cda-492c-914d-7f2fd90c5321)
 
 ---
-:wq
