@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="icon" type="image/x-icon" href="images/icon.png">
+<link rel="stylesheet" href="styles/102-common.css">
+<link rel="stylesheet" href="styles/102-header.css">
+<link rel="stylesheet" href="styles/102-footer.css">
+<link rel="stylesheet" href="styles/102-filters.css">
+<link rel="stylesheet" href="styles/102-places.css">
+</head>
+<body>
+<header>
+  <div class="logo"><img src="images/logo.png"></div>
+  <!-- Simulate a smartphone / tablet -->
+<div class="mobile-container">
+
+  <!-- Top Navigation Menu -->
+  <div class="topnav">
+    <a href="#home" class="active"><img src="images/logo.png"></a>
+    <div class="top" id="myLinks">
+      <a href="#news">
+        <h3>States</h3>
+        <h4>California, Arizona...</h4>
+          <div class="dropdown-content">
+            <div class="row">
+              <div class="column">
+                <h3>Arizona</h3>
+                <a href="#">Page 1</a>
+                <a href="#">Page 2</a>
+              </div>
+              <div class="column">
+                <h3>California</h3>
+                <a href="#">Sanfranciso</a>
+                <a href="#">Los Altos</a>
+              </div>
+            </div>
+          </div>
+      </a>
+      <a href="#contact">
+        <h3>Amenities</h3>
+        <h4>Internet, Kitchen...</h4>
+        <ul class="popover">
+          <li>Internet</li>
+          <li>Tv</li>
+          <li>Kitchen</li>
+          <li>Iron</li>
+        </ul>
+      </a>
+      <a href="#about">
+        <input type="text" placeholder="Search">
+        <button type="button" name="button">Search</button>
+      </a>
+    </div>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+  <!-- End smartphone / tablet look -->
+  </div>
+</header>
+<div class="container">
+  <section class="filters">
+    <div class="locations">
+      <h3>States</h3>
+      <h4>California, Arizona...</h4>
+      <ul class="popover">
+        <li><h2>Arizona:</h2>
+          <ul>
+            <li>Page</li>
+            <li>Page2</li>
+          </ul>
+        </li>
+        <li><h2>California:</h2>
+          <ul>
+            <li>San Francisco</li>
+            <li>Los Altos</li>
+          </ul>
+        </li>
+        </ul>
+    </div>
+    <div class="amenities">
+      <h3>Amenities</h3>
+      <h4>Internet, Kitchen...</h4>
+      <ul class="popover">
+        <li>Internet</li>
+        <li>Tv</li>
+        <li>Kitchen</li>
+        <li>Iron</li>
+      </ul>
+    </div>
+    <button type="button" name="button">Search</button>
+  </section> <!-- end fiter-->
+    <section class="places">
+      <h1>Places</h1>
+      <article><!-- My home -->
+        <div class="article_places_header">
+          <h2>My home</h2>
+          <div class="price_by_night">$80</div>
+        </div>
+        <div class="information">
+          <div class="max_guest">2 Guests</div>
+          <div class="number_rooms">1 Bedroom</div>
+          <div class="number_bathrooms">1 Bathroom</div>
+        </div><!-- end information -->
+        <div class="user">
+          <p><b>Owner:</b> John Lennon</p>
+        </div><!-- end user -->
+        <div class="description">
+          <p>This is a lovely 1 bathroom apartament that can accommodate 2 people. It locates at the center of Shanghai and next to subway line 1, 1 stop to People Square, 2 stops to Bund, 3 stops to Jungan Temle.</p>
+        </div><!-- end description -->
+        <div class="amenities">
+          <h2>Amenities</h2>
+          <ul>
+            <li>
+              <div class="pet"></div>
+              Pet friendly
+          </li>
+            <li>
+              <div class="tv"></div>
+              Tv
+          </li>
+            <li>
+              <div class="wifi"></div>
+              Wifi
+          </li>
+          </ul>
+        </div>
+        <div class="reviews">
+          <h2>2 Reviews</h2>
+          <ul>
+            <li>
+              <h3>From Bob Dylan the 27th August 2022</h3>
+              <p>Runshi is an epic host. Nothing more i can say. 5 star!</p>
+            </li>
+            <li>
+              <h3>From Connor 4th August 2022</h3>
+              <p>Higly recommended!</p>
+            </li>
+          </ul>
+        </div>
+      </article><!-- end My home -->
+
+      <article>
+        <h2>Tiny house</h2>
+        <div class="price_by_night">$65</div>
+        <div class="information">
+          <div class="max_guest">4 Guests</div>
+          <div class="number_rooms">2 Bedrooms</div>
+          <div class="number_bathrooms">1 Bathroom</div>
+        </div><!-- end information -->
+        <div class="user">
+          <p><b>Owner:</b> Addrienne</p>
+        </div><!-- end user -->
+        <div class="description">
+          <p>Our place is a privete, afffordable satan-alone guest house centrally located just minutes to French Quarters, downtown th Fair Grounds (Jazz Fest) and City Park. The guest house is a quaint, 400 suare ft. with a full bath, mini kitchen, & livin room. The extra high cellings make the home feel more spacious. The sofa converts to bed also. We have a hand made counter area that adds character to the room and a great porch/deck to relax on and have a glass of Merlot.</p>
+        </div><!-- end description -->
+        <div class="amenities">
+          <h2>Amenities</h2>
+          <ul>
+            <li>
+              <div class="pet"></div>
+              Pet friendly
+          </li>
+          </ul>
+        </div>
+        <div class="reviews">
+          <h2>2 Reviews</h2>
+          <ul>
+            <li>
+              <h3>From Max the 15th August 2022</h3>
+              <p>Runshi is an epic host. Nothing more i can say. 5 star!</p>
+            </li>
+            <li>
+              <h3>From Connor 4th August 2022</h3>
+              <p>Higly recommended!</p>
+            </li>
+          </ul>
+        </div>
+      </article>
+
+      <article>
+        <h2>A suite</h2>
+        <div class="price_by_night">$190</div>
+        <div class="information">
+          <div class="max_guest">5 Guests</div>
+          <div class="number_rooms">3 Bedroom</div>
+          <div class="number_bathrooms">2 Bathroom</div>
+        </div><!-- end information -->
+        <div class="user">
+          <p><b>Owner:</b> Mick Jagger</p>
+        </div><!-- end user -->
+        <div class="description">
+          <p>First loft built by Holbies. It contains a decked terrace, jacuzzi, firepit, rabbits garden, two rooms, two balconies, entrance gate, private garden, private parking, BBQ area, AC in each bedroom, technological equipment, luxury beds, and mountain views. Ideal for architecture lovers, romantic dates, or having a good time. It is a unique space of his kind. Only pets that do not harm rabbits are allowed.</p>
+        </div><!-- end description -->
+        <div class="amenities">
+          <h2>Amenities</h2>
+          <ul>
+            <li>
+              <div class="pet"></div>
+              Pet friendly
+          </li>
+            <li>
+              <div class="tv"></div>
+              Tv
+          </li>
+            <li>
+              <div class="wifi"></div>
+              Wifi
+          </li>
+          </ul>
+        </div>
+        <div class="reviews">
+          <h2>1 Review</h2>
+          <ul>
+            <li>
+              <h3>From Gary Moore the 13th August 2022</h3>
+              <p>I love this place. Amazing!</p>
+            </li>
+          </ul>
+        </div>
+      </article>
+
+      <article><!-- My home -->
+        <div class="article_places_header">
+          <h2>My house</h2>
+          <div class="price_by_night">$200</div>
+        </div>
+        <div class="information">
+          <div class="max_guest">2 Guests</div>
+          <div class="number_rooms">1 Bedroom</div>
+          <div class="number_bathrooms">1 Bathroom</div>
+        </div><!-- end information -->
+        <div class="user">
+          <p><b>Owner:</b>John Seena</p>
+        </div><!-- end user -->
+        <div class="description">
+          <p>This is a lovely 1 bathroom apartament that can accommodate 2 people. It locates at the center of Shanghai and next to subway line 1, 1 stop to People Square, 2 stops to Bund, 3 stops to Jungan Temle.</p>
+        </div><!-- end description -->
+        <div class="amenities">
+          <h2>Amenities</h2>
+          <ul>
+            <li>
+              <div class="pet"></div>
+              Pet friendly
+          </li>
+            <li>
+              <div class="tv"></div>
+              Tv
+          </li>
+            <li>
+              <div class="wifi"></div>
+              Wifi
+          </li>
+          </ul>
+        </div>
+        <div class="reviews">
+          <h2>2 Reviews</h2>
+          <ul>
+            <li>
+              <h3>From Bob Dylan the 27th August 2022</h3>
+              <p>Runshi is an epic host. Nothing more i can say. 5 star!</p>
+            </li>
+            <li>
+              <h3>From Connor 4th August 2022</h3>
+              <p>Higly recommended!</p>
+            </li>
+          </ul>
+        </div>
+      </article><!-- end My home -->
+
+      <article><!-- My home -->
+        <div class="article_places_header">
+          <h2>Ryokan</h2>
+          <div class="price_by_night">$79</div>
+        </div>
+        <div class="information">
+          <div class="max_guest">2 Guests</div>
+          <div class="number_rooms">1 Bedroom</div>
+          <div class="number_bathrooms">1 Bathroom</div>
+        </div><!-- end information -->
+        <div class="user">
+          <p><b>Owner:</b> John Lennon</p>
+        </div><!-- end user -->
+        <div class="description">
+          <p>This is a lovely 1 bathroom apartament that can accommodate 2 people. It locates at the center of Shanghai and next to subway line 1, 1 stop to People Square, 2 stops to Bund, 3 stops to Jungan Temle.</p>
+        </div><!-- end description -->
+        <div class="amenities">
+          <h2>Amenities</h2>
+          <ul>
+            <li>
+              <div class="pet"></div>
+              Pet friendly
+          </li>
+            <li>
+              <div class="tv"></div>
+              Tv
+          </li>
+            <li>
+              <div class="wifi"></div>
+              Wifi
+          </li>
+          </ul>
+        </div>
+        <div class="reviews">
+          <h2>2 Reviews</h2>
+          <ul>
+            <li>
+              <h3>From Bob Dylan the 27th August 2022</h3>
+              <p>Runshi is an epic host. Nothing more i can say. 5 star!</p>
+            </li>
+            <li>
+              <h3>From Connor 4th January 2021</h3>
+              <p>Higly recommended!</p>
+            </li>
+          </ul>
+        </div>
+      </article><!-- end My home -->
+
+      <article><!-- My home -->
+        <div class="article_places_header">
+          <h2>Dammusi</h2>
+          <div class="price_by_night">$80</div>
+        </div>
+        <div class="information">
+          <div class="max_guest">8 Guests</div>
+          <div class="number_rooms">1 Bedroom</div>
+          <div class="number_bathrooms">1 Bathroom</div>
+        </div><!-- end information -->
+        <div class="user">
+          <p><b>Owner:</b> John Lennon</p>
+        </div><!-- end user -->
+        <div class="description">
+          <p>This is a lovely 1 bathroom apartament that can accommodate 2 people. It locates at the center of Shanghai and next to subway line 1, 1 stop to People Square, 2 stops to Bund, 3 stops to Jungan Temle.</p>
+        </div><!-- end description -->
+        <div class="amenities">
+          <h2>Amenities</h2>
+          <ul>
+            <li>
+              <div class="pet"></div>
+              Pet friendly
+          </li>
+            <li>
+              <div class="tv"></div>
+              Tv
+          </li>
+            <li>
+              <div class="wifi"></div>
+              Wifi
+          </li>
+          </ul>
+        </div>
+        <div class="reviews">
+          <h2>2 Reviews</h2>
+          <ul>
+            <li>
+              <h3>From Bob Dylan the 27th August 2022</h3>
+              <p>Runshi is an epic host. Nothing more i can say. 5 star!</p>
+            </li>
+            <li>
+              <h3>From Connor 4th August 2022</h3>
+              <p>Higly recommended!</p>
+            </li>
+          </ul>
+        </div>
+      </article><!-- end My home -->
+
+      </section> <!-- end section -->
+  </div>
+  <footer>
+    <p>Best School</p>
+  </footer>
+  <script>
+    function myFunction() {
+    var x = document.getElementById("myLinks");
+    if (x.style.display === "block") {
+      x.style.display = "none";
+    } else {
+      x.style.display = "block";
+    }
+  }
+  </script>
+
+</body>
+</html>
